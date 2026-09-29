@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+        PATH = "C:\\src\\flutter\\bin;${env.PATH}"
+    }
+
     stages {
         stage('Get Dependencies') {
             steps {
